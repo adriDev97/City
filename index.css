@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.dFlex {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* sky */
+.sky {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: lightblue;
+    background: linear-gradient(180deg, lightblue, white);
+    animation: sunset 7s infinite;
+}
+@keyframes sunset {
+    from {
+        background: linear-gradient(180deg, lightblue, white);
+    }
+
+    to {
+        background: linear-gradient(0deg, rgba(189,114,44,1) 0%, rgba(152,91,48,1) 0%, rgba(23,10,61,1) 100%);
+    }
+}
+
+.sun {
+    width: 9vh;
+    height: 9vh;
+    background-color: rgb(247, 236, 76);
+    border-radius: 50%;
+    background-image: radial-gradient(yellow 20%, white 85%);
+    box-shadow: 0 0 5vh 5vh rgb(244, 244, 172);
+    animation: moon 7s infinite;
+}
+@keyframes moon {
+    from {
+        background-color: rgb(247, 236, 76);
+        background-image: radial-gradient(yellow 20%, white 85%);
+        box-shadow: 0 0 5vh 5vh rgb(244, 244, 172);
+    }
+
+    to {
+        background-color: rgb(249, 249, 244);
+        background-image: radial-gradient(rgb(203, 203, 201) 20%, white 85%);
+        box-shadow: 0 0 2vh 2vh rgb(181, 181, 180);
+    }
+}
+
+/* letf street buildings */
+.building {
+    width: 15%;
+}
+
+.buildingGray {
+    top: 50vh;
+    height: 25vh;
+    background-color: darkgray;
+}
+
+div.buildingGray.grayFirst {
+    left: 15%;
+}
+
+div.buildingGray.graySecond {
+    left: 90%;
+    width: 10%;
+}
+
+.buildingDark {
+    top: 37vh;
+    height: 40vh;
+    background-color: rgb(64, 62, 62);
+
+}
+
+.darkTwo {
+    left: 60%;
+}
+
+.buildingDarkgray {
+    top: 40vh;
+    height: 35vh;
+    background-color: rgb(120, 117, 117);
+}
+
+div.buildingDarkgray.darkgrayOne {
+    left: 45%
+}
+
+div.buildingDarkgray.darkgrayTwo {
+    left: 75%
+}
+
+/* parking section */
+.parking {
+    top: 63vh;
+    width: 2%;
+    height: 12vh;
+    background-color: black;
+}
+
+div.parking.left {
+    left: 30%;
+}
+
+div.parking.right {
+    left: 43%;
+}
+
+div.parkingTop {
+    top: 58vh;
+    left: 30%;
+    width: 15%;
+    height: 5vh;
+    background-color: black;
+     clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /*parking triangle clip-path works to form the sides of the triangle*/
+}
+
+div.parkingTop small {
+    color: white;
+    margin: 3vh auto;
+}
+
+/* windows */
+.window1 {
+    margin-top: 2vh;
+    width: 10%;
+    height: 3vh;
+    background-color: aliceblue;
+    animation: turnOn 7s infinite;
+}
+
+@keyframes turnOn {
+    from {
+        background-color: aliceblue;
+    }
+
+    to {
+        background-color: #f4cc3a;
+    }
+}
+
+/* door */
+div.building div.door {
+    margin: 4vh auto 0 auto;
+    width: 30%;
+    height: 6vh;
+    background-color: aliceblue;
+}
+
+/* street */
+
+.street {
+    top: 80vh;
+    height: 3vh;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.cars {
+    width: 5%;
+    height: 2vh;
+    background-color: gray;
+    clip-path: polygon(23% 0,
+            53% 1%,
+            71% 41%,
+            100% 52%,
+            100% 100%,
+            0 100%,
+            0 28%);
+}
+
+.parkingCars {
+    left: 32%;
+}
+
+.firstCar {
+    top: 63.2vh;
+}
+
+.secondCar {
+    top: 65.3vh;
+}
+
+.thirdCar {
+    top: 67.5vh;
+}
+
+.fourthCar {
+    top: 70vh;
+}
+
+.weels {
+    bottom: -0.5vh;
+    width: 25%;
+    height: 1vh;
+    border-radius: 50%;
+    background-color: #1b1b1b;
+}
+
+.weel1 {
+    left: 9%;
+}
+
+.weel2 {
+    right: 18%;
+}
+
+@keyframes go {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.streetCar {
+    top: 80vh;
+    animation: move 10s infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+        top: 80vh;
+    }
+
+    100% {
+        left: 100%;
+        top: 80vh;
+    }
+}
+
+.windw {
+    background-color: black;
+}
+
+.w1 {
+    top: 0.1vh;
+    left: 4%;
+    width: 55%;
+    height: 1.7vh;
+    clip-path: polygon(40% 0,
+            55% 0,
+            55% 55%,
+            0 55%,
+            0 33%);
+}
+
+.w2 {
+    top: 0.1vh;
+    right: 28%;
+    width: 35%;
+    height: 1.7vh;
+    clip-path: polygon(0% 0,
+            41% 0,
+            97% 55%,
+            0 55%);
+}
+
+/* responsive */
+
+@media screen and (min-width: 480px) {
+
+    /* sky */
+    .sun {
+        width: 13vh;
+        height: 13vh;
+        background-image: radial-gradient(yellow 20%, white 90%);
+    }
+
+    /* street */
+
+    .street {
+        height: 4vh;
+    }
+
+    .w1 {
+        top: 0.2vh;
+        height: 2vh;
+        clip-path: polygon(40% 0,
+                55% 0,
+                55% 55%,
+                0 55%,
+                0 40%);
+    }
+
+    .w2 {
+        top: 0.2vh;
+        height: 1.7vh;
+        clip-path: polygon(0% 0,
+                40% 0,
+                80% 65%,
+                0 65%);
+    }
+}
